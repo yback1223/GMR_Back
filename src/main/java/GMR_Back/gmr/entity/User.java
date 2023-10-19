@@ -11,11 +11,11 @@ public class User {
     private int weight;
     private int height;
     private String role;
-    private Timestamp create_at;
+    private Timestamp created_at;
 
     public User() {}
 
-    public User(String email, String password, String username, String phone, int weight, int height, String role, Timestamp create_at) {
+    public User(String email, String password, String username, String phone, int weight, int height, String role, Timestamp created_at) {
         this.email = email;
         this.password = password;
         this.username = username;
@@ -23,7 +23,7 @@ public class User {
         this.weight = weight;
         this.height = height;
         this.role = role;
-        this.create_at = create_at;
+        this.created_at = created_at;
     }
 
     public Long getId() {
@@ -91,10 +91,10 @@ public class User {
     }
 
     public Timestamp getCreate_at() {
-        return create_at;
+        return created_at;
     }
 
-    public void setCreate_at(Timestamp create_at) {
-        this.create_at = create_at;
+    public void setCreate_at(Timestamp created_at) {
+        this.created_at = created_at;
     }
 }

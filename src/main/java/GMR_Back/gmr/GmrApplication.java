@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("GMR_Back.gmr.mapper")
+@MapperScan("GMR_Back.gmr.model.mapper")
 public class GmrApplication {
 
 	public static void main(String[] args) {

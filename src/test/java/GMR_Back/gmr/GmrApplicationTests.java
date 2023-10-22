@@ -1,7 +1,9 @@
 package GMR_Back.gmr;
 
-import GMR_Back.gmr.entity.User;
-import GMR_Back.gmr.mapper.UserMapper;
+
+
+import GMR_Back.gmr.model.entity.User;
+import GMR_Back.gmr.model.mapper.UserMapper;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

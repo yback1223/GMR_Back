@@ -1,4 +1,4 @@
-package GMR_Back.gmr.entity;
+package GMR_Back.gmr.model.entity;
 
 import java.sql.Timestamp;
 

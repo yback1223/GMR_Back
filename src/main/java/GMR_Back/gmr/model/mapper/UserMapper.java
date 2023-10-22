@@ -1,6 +1,6 @@
-package GMR_Back.gmr.mapper;
+package GMR_Back.gmr.model.mapper;
 
-import GMR_Back.gmr.entity.User;
+import GMR_Back.gmr.model.entity.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.*;

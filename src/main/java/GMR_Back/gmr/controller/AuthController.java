@@ -1,6 +1,7 @@
 package GMR_Back.gmr.controller;
 
 import GMR_Back.gmr.controller.service.AuthService;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/auth")
 public class AuthController {
 
-    private AuthService authService;
+    private final AuthService authService;
 
     @Autowired
     public AuthController(AuthService authService) {
@@ -20,8 +21,10 @@ public class AuthController {
     }
 
     @PostMapping("/checkToken")
-    public ResponseEntity<String> checkToken(@RequestBody String token) {
-        System.out.println("Received token = " + token);
-        return ResponseEntity.ok("Received token: " + token);
+    public ResponseEntity<String> checkToken(@RequestBody String tokenFromApp) {
+        JSONObject jsonToken = new JSONObject(tokenFromApp);
+        String dataFromKakao = authService.authenticateWithKakao(jsonToken.getString("Token"));
+
+        return ResponseEntity.ok("good !!!");
     }
 }
